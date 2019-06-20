@@ -4,7 +4,7 @@
 注：elasticsearch-php git地址：https://github.com/elastic/elasticsearch-php
 
 # Installation via Composer
-The recommended method to install Elasticsearch-PHP is through Composer.
+The recommended method to install ielongphp/es-build-query is through Composer.
 
 Add tielongphp/es-build-query as a dependency in your project's composer.json file (change version to suit your version of tielongphp/es-build-query, for instance for ^1.0):
 
