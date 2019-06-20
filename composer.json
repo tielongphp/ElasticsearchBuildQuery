@@ -1,5 +1,5 @@
 {
-    "name": "tielongphp/EsBuildQuery",
+    "name": "tielongphp/Es-build-query",
     "description": "对Elasticsearch-PHP进行查询语句封装 可实现链式调用 方便es查询",
     "keywords": ["php","Elasticsearch","Build","Query"],
     "authors": [
