@@ -39,3 +39,35 @@ You can find out more on how to install Composer, configure autoloading, and oth
 # Documentation && Quickstart
 
 
+example:
+
+1、 
+
+          $elasticSearch = new \EsBuildQuery\EsBuildQuery("127.0.1.1:9200");
+          $config = [
+              'indexName' => '_indexName',
+              'indexType' => '_typeName'
+          ];
+          
+          $attrWhere['must'][]['range']['@timestamp'] = [
+              'gt' => strtotime('2019-01-01').'000',
+              'lte' => strtotime('2019-01-02').'000',
+              'format' => "epoch_millis"
+          ];
+          //精确匹配：requestUri = '/a/b/c'
+          $attrWhere['must'][]['match']['requestUri'] = '/a/b/c';
+          
+          $attList = $elasticSearch->_set($config)
+              ->where($attrWhere)
+              ->limit(20, 0)
+              ->fields(['requestUri','apiStart'])
+              ->select();
+
+
+          相当于SQl：
+          selsect requestUri,apiStart from tableName where @timestamp > ? and @timestamp<= ?
+                and requestUri = '/a/b/c' LIMIT 20
+                
+                
+         
+
