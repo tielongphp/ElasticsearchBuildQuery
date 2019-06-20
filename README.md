@@ -68,6 +68,28 @@ example:
           selsect requestUri,apiStart from tableName where @timestamp > ? and @timestamp<= ?
                 and requestUri = '/a/b/c' LIMIT 20
                 
+2、        
+                  
+                   // 正则查询：排除request 中带后缀名的 如.jpg、.js等
+                   $commonWhere['must'][]['regexp']['request.keyword'] = '/*([^.]*)';// /*([^.]*?)
+                   // 模糊匹配查询：只查询域名字段domain中包含XXX的数据
+                   $commonWhere['must'][]['query_string'] = [
+                       'query' => 'domain:*XXX*',
+                       "analyze_wildcard" => true,
+                       "default_field" => "*"
+                   ];
+           
+                   //模糊匹配查询：最后还是采用只统计带/json的接口 类似于 myql的like  %/json%
+                   $commonWhere['must'][]['match_phrase']['request']['query'] = '/json';
+
+                   // group 分组查询
+                   $arrList = $elasticSearch->_set($config)
+                       ->where($commonWhere)
+                       ->group("domain.keyword")
+                       ->select();
+                       
+3、More instance methods can be found in the EsBuildQuery class 
+           
                 
          
 
