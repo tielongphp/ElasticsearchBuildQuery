@@ -1,10 +1,10 @@
 <?php
 
-namespace App\library;
+namespace EsBuildQuery;
 
 use Elasticsearch\ClientBuilder;
 
-class EsBuild
+class EsBuildQuery
 {
     // 实例化对象变量
     private $client = null;

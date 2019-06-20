@@ -9,7 +9,7 @@
         }
     ],
     "autoload": {
-        "psr-4": {"EsBuild\\": "src"}
+        "psr-4": {"EsBuildQuery\\": "src"}
     },
     "require": {
         "elasticsearch/elasticsearch": "^6.1",
