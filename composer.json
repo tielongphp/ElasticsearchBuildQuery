@@ -1,0 +1,21 @@
+{
+    "name": "tielongphp/Elasticsearch-BuildQuery",
+    "description": "对Elasticsearch-PHP进行查询语句封装 可实现链式调用 方便es查询",
+    "keywords": ["php","Elasticsearch","Build","Query"],
+    "authors": [
+        {
+            "name": "zhangtielong",
+            "email": "tielongphp@163.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"EsBuild\\": "src"}
+    },
+    "require": {
+        "elasticsearch/elasticsearch": "^6.1",
+        "php": ">=7.1.0"
+    },
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "prefer-stable": true
+}
