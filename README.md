@@ -3,13 +3,10 @@
 
 注：elasticsearch-php git地址：https://github.com/elastic/elasticsearch-php
 
-# Documentation
-Full documentation can be found here. Docs are stored within the repo under /docs/, so if you see a typo or problem, please submit a PR to fix it!
-
 # Installation via Composer
 The recommended method to install Elasticsearch-PHP is through Composer.
 
-Add elasticsearch/elasticsearch as a dependency in your project's composer.json file (change version to suit your version of Elasticsearch, for instance for ES 7.0):
+Add tielongphp/es-build-query as a dependency in your project's composer.json file (change version to suit your version of tielongphp/es-build-query, for instance for ^1.0):
 
     {
         "require": {
@@ -39,6 +36,6 @@ Composer also prepares an autoload file that's capable of autoloading all the cl
 You can find out more on how to install Composer, configure autoloading, and other best-practices for defining dependencies at getcomposer.org.
 
 
-# Quickstart
+# Documentation && Quickstart
 
 
